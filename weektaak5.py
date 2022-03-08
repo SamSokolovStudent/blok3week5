@@ -7,8 +7,8 @@ def main():
 
 
 def file_acceptor():
-    """Accepts files from command line, returns all command line
-    arguments as "files" in a list.
+    """Accepts files from directory with correct file
+     extensions as "file" in a list.
 
     :return file_list"""
     file_extension = (".FASTA", ".fasta", ".txt")
@@ -77,8 +77,7 @@ def file_writer(env_dict):
     for key, value in env_dict.items():
         file.write(key)
         file.write(value)
-        file.write("\n")
-        file.write("\n")
+        file.write("\n"*2)
     file.close()
 
 
